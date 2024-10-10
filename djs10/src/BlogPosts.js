@@ -27,4 +27,18 @@ const BlogPosts = () => {
   if (error) {
     return <div>Error: {error}</div>;
   }
+
+  return (
+    <div>
+      <h1>Blog Posts</h1>
+      {posts.map((post) => (
+        <div key={post.id}>
+          <h2>{post.title}</h2>
+          <p>{post.body}</p>
+        </div>
+      ))}
+    </div>
+  );
 };
+
+export default BlogPosts;
